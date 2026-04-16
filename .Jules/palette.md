@@ -1,0 +1,3 @@
+## 2024-04-16 - Replace interactive divs with semantic buttons and add ARIA labels to icon-only buttons
+**Learning:** Found that custom selection cards in `PlanGenerator.tsx` were using `div` elements with `onClick` handlers, which lacked proper keyboard navigation and screen reader support (like `aria-pressed`). Also, the delete action in `Dashboard.tsx` was an icon-only button lacking an accessible name, making its purpose unclear to screen reader users.
+**Action:** When creating selectable cards or interactive elements, always use `<button type="button">` instead of `<div>` to ensure native keyboard support, and add `aria-pressed` for toggle states. For icon-only buttons, always ensure an `aria-label` or `title` is provided to describe the action.
