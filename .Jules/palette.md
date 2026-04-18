@@ -1,0 +1,3 @@
+## 2024-04-18 - Semantic Elements vs Interactive Divs
+**Learning:** Found an accessibility anti-pattern in the Plan Generator where a clickable `div` was used for link selection. This meant the element was unreachable via keyboard navigation (no `tabindex` or native focusability) and couldn't be activated with Enter/Space keys, making it inaccessible to keyboard-only and screen reader users.
+**Action:** Replaced the interactive `div` with a semantic `<button type="button">`, adding `aria-pressed` for state management and `focus-visible` utility classes to ensure a clear visual focus indicator without relying on custom keyboard event handlers.
