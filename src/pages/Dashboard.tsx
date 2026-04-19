@@ -117,7 +117,9 @@ const Dashboard: React.FC = () => {
                 </div>
                 <button
                   onClick={() => removeLink(link.id)}
-                  className="text-red-500 hover:text-red-700 p-1"
+                  className="text-red-500 hover:text-red-700 p-1 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                  aria-label="링크 삭제"
+                  title="링크 삭제"
                 >
                   <Trash2 className="w-5 h-5" />
                 </button>

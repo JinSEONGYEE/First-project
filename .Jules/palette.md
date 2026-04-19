@@ -1,0 +1,3 @@
+## 2024-05-18 - Semantic HTML and Keyboard Accessibility
+**Learning:** Using `<div>` with `onClick` for interactive list items breaks keyboard accessibility and screen reader support. Icon-only buttons without explicit labels (like `aria-label`) are completely inaccessible to screen reader users. Furthermore, without proper focus styles, keyboard users cannot tell which element is currently active.
+**Action:** Always use semantic `<button>` elements for custom interactive components. Ensure to apply `.focus:outline-none focus:ring-2` to provide clear visual feedback. For icon-only buttons, always include `aria-label` and `title` attributes. Provide `aria-pressed` or `aria-selected` for toggle buttons.
