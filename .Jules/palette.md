@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive Card Accessibility
+**Learning:** Using `div` elements with `onClick` handlers for interactive cards misses native button features like keyboard focus, `Space`/`Enter` key events, and semantic meaning for screen readers. This creates a barrier for users navigating via keyboard or assistive technologies.
+**Action:** Always use `<button type="button">` for custom interactive cards or elements that act like buttons. Ensure to add `aria-pressed` for toggle states and include `focus-visible` styles so keyboard users have clear visual feedback when interacting with them.
