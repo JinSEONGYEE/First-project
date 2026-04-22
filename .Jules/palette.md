@@ -1,0 +1,3 @@
+## 2024-04-22 - Replace Interactive Divs with Semantic Buttons
+**Learning:** Using `<div>`s with `onClick` handlers for interactive elements creates accessibility barriers, as they lack native keyboard support (focus states, Enter/Space activation) and semantic meaning for screen readers. Icon-only buttons also require ARIA labels to be accessible to screen readers, and should have visible focus indicators to assist keyboard users.
+**Action:** Always replace interactive `<div>`s with semantic `<button type="button">` elements. This provides free keyboard accessibility and focus management. For icon-only buttons, always include `aria-label` and ensure there are distinct `focus-visible` styles. Use `aria-pressed` on buttons that act as toggles.
