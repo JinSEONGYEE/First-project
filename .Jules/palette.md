@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive Elements Accessibility (div vs button)
+**Learning:** Using `div` with `onClick` for interactive cards breaks keyboard accessibility (tab navigation and Enter/Space activation) and fails to convey the element's interactive nature to screen readers. In addition, icon-only buttons require explicit `aria-label`s, especially in localized interfaces where screen readers need the correct context (e.g. "링크 삭제").
+**Action:** Always use semantic `<button type="button">` for interactive cards. Add `aria-pressed` for selectable cards, ensure clear focus states (e.g., `focus:ring-2`), and always add `aria-label` to icon-only buttons.
