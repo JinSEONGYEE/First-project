@@ -77,16 +77,18 @@ const PlanGenerator: React.FC = () => {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-60 overflow-y-auto p-2 border rounded-md bg-gray-50">
                 {links.map((link) => (
-                  <div
+                  <button
                     key={link.id}
+                    type="button"
                     onClick={() => toggleLinkSelection(link.id)}
-                    className={`cursor-pointer p-3 border rounded-md transition-colors ${
+                    aria-pressed={selectedLinks.includes(link.id)}
+                    className={`text-left w-full cursor-pointer p-3 border rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 ${
                       selectedLinks.includes(link.id)
                         ? 'bg-green-50 border-green-500 ring-1 ring-green-500'
                         : 'bg-white border-gray-200 hover:border-gray-300'
                     }`}
                   >
-                    <div className="flex items-center">
+                    <div className="flex items-center w-full">
                       <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 mr-2">
                         {link.service}
                       </span>
@@ -97,7 +99,7 @@ const PlanGenerator: React.FC = () => {
                         <Circle className="w-4 h-4 text-gray-300 flex-shrink-0" />
                       )}
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             )}
