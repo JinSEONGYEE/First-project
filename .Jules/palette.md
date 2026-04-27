@@ -1,0 +1,3 @@
+## 2026-04-27 - Semantic Buttons for Interactive Lists
+**Learning:** Interactive list items (like selectable design link cards) should always be implemented as semantic `<button>` elements rather than `<div onClick={...}>`. This provides free keyboard accessibility (Space/Enter activation) and allows proper use of `aria-pressed` to convey toggle state to screen readers.
+**Action:** When implementing selectable cards or list items, use `<button type="button">`, add `w-full text-left` to maintain layout, provide clear `focus-visible` states, and use `aria-pressed` instead of relying solely on visual indicators or hidden icons.
