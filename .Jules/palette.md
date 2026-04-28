@@ -1,0 +1,3 @@
+## 2024-05-18 - Semantic Buttons vs Interactive Divs
+**Learning:** Using semantic `<button>` elements instead of interactive `<div>` tags natively supports keyboard accessibility (Enter/Space), focus management, and screen reader announcements. Adding `aria-pressed` properly conveys toggle states to assistive tech. Also, icon-only buttons need `aria-label` or `title` attributes so screen readers can describe their action.
+**Action:** Always default to semantic HTML like `<button>` for clickable elements. Avoid adding `onClick` handlers directly on `<div>` elements. Explicitly define focus visible states for custom button styles and make sure to hide purely decorative icons with `aria-hidden="true"`.
